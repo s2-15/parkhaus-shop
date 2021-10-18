@@ -1,0 +1,117 @@
+
+body{
+	margin: 0;
+	font-family: Arial;
+}
+
+
+#content{
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+
+header{
+	background-color: #154889;
+	line-height: 60px;
+}
+
+header *{
+	box-sizing: border-box;
+}
+
+header img{
+	height: 60px;
+	padding: 5px;
+	float: left;
+}
+
+header #title{
+	vertical-align: top;
+	color: white;
+	margin-left: 10px;
+	font-size: 30px;
+}
+
+
+main{
+	flex: 1 0 auto;
+	margin: 50px 20vw;
+}
+
+
+footer{
+	text-align: center;
+	padding: 10px;
+	background-color: #aaa;
+	font-size: 12px;
+}
+
+
+.itemcard{
+	display: inline-block;
+	min-width: 300px;
+	padding: 20px;
+	background-color: #8884;
+	transition: background-color .2s ease-in-out;
+}
+
+.itemcard:hover{
+	background-color: #8886;
+}
+
+.itemcard img{
+	width: 100%;
+}
+
+.itemcard .title{
+	font-size: 20px;
+	margin: 10px 0px;
+}
+
+.itemcard .description{
+	margin: 10px 0px;
+}
+
+.stars{
+	--percent: calc(var(--rating) / 5 * 100%);
+	font-family: Times;
+	line-height: 1;
+	font-size: 20px;
+	display: inline-block;
+}
+
+.stars::before{
+	content: '★★★★★';
+	background: linear-gradient(to right, #fc0 var(--percent), #ccc var(--percent));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.ratingCount{
+	margin-left: 5px;
+	color: gray;
+	font-size: 15px;
+	vertical-align: text-bottom;
+}
+
+.inStock{
+	margin-top: 10px;
+	color: green;
+	font-size: 15px;
+}
+
+.outOfStock{
+	color: red;
+}
+
+
+
+@media only screen and (orientation: portrait){
+
+	main{
+		margin: 50px 50px;
+	}
+}
+

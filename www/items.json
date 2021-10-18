@@ -1,0 +1,11 @@
+[
+	{
+		"id": "sticker",
+		"name": "Parkhaus Sticker",
+		"description": "description",
+		"rating": 5,
+		"ratingCount": 517,
+		"inStock": 99999,
+		"hasPage": false
+	}
+]
