@@ -5,7 +5,16 @@
 		"description": "description",
 		"rating": 5,
 		"ratingCount": 517,
-		"inStock": 99999,
+		"inStock": 999,
+		"hasPage": false
+	},
+	{
+		"id": "sticker_da",
+		"name": "Parkhaus Darmstadt Sticker",
+		"description": "Parkhaus mit dem Darmstadt Wappen. Design von <i>simla</i>",
+		"rating": 5,
+		"ratingCount": 3961,
+		"inStock": 0,
 		"hasPage": false
 	}
 ]
