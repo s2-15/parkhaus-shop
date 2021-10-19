@@ -51,10 +51,12 @@ footer{
 
 .itemcard{
 	display: inline-block;
-	min-width: 300px;
+	width: 300px;
 	padding: 20px;
 	background-color: #8884;
 	transition: background-color .2s ease-in-out;
+	margin: 10px;
+	vertical-align: top;
 }
 
 .itemcard:hover{
