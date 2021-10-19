@@ -16,5 +16,14 @@
 		"ratingCount": 3961,
 		"inStock": 0,
 		"hasPage": false
+	},
+	{
+		"id": "lebkuchen",
+		"name": "Parkhaus Lebkuchen",
+		"description": "Mit offiziellem Parkhaus Geschmack&trade;. Könnte Spuren von Matikern enthalten",
+		"rating": 4.5,
+		"ratingCount": 93,
+		"inStock": 23,
+		"hasPage": false
 	}
 ]
