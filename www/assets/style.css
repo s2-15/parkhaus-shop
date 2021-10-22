@@ -2,6 +2,7 @@
 body{
 	margin: 0;
 	font-family: Arial;
+	background-color: #ddd;
 }
 
 
@@ -51,16 +52,18 @@ footer{
 
 .itemcard{
 	display: inline-block;
+	vertical-align: top;
 	width: 300px;
 	padding: 20px;
-	background-color: #8884;
-	transition: background-color .2s ease-in-out;
 	margin: 10px;
-	vertical-align: top;
+	border-radius: 10px;
+	background-color: #fff;
+	transition: transform .2s ease-in-out;
+	filter: drop-shadow(20px 10px 3px #bbb);
 }
 
 .itemcard:hover{
-	background-color: #8886;
+	transform: scale(1.05);
 }
 
 .itemcard img{
