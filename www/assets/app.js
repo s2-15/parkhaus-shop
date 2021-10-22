@@ -21,6 +21,7 @@
 					innerHTML += '<div class="inStock">' + i.inStock + ' in stock</div>';
 				else
 					innerHTML += '<div class="inStock outOfStock">Out of stock</div>';
+				innerHTML += "<div class=\"pushable\"><span class=\"buttonFront\"><b>BUY</b></span></div>";
 				innerHTML += '</div>';
 			}
 			itemEl.innerHTML = innerHTML;
