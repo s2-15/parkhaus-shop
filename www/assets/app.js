@@ -39,9 +39,9 @@
 				background.style.display = "block";
 				background.style["background-image"] = "url(\"assets/items/confetti.png\")";
 				background.innerHTML = "<div id=\"popup\" class=\"popup\"><b>Added to cart!</b></div>";
-				background.addEventListener("click", event => {
-					background.style.display = "none";
-				});
+				const hidePopup = () => { background.style.display = "none"; };
+				background.addEventListener("click", hidePopup);
+				setTimeout(hidePopup, 3000);
 			});
 		}
 	}
