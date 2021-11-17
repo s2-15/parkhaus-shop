@@ -30,18 +30,23 @@
 			onFinished();
 		});
 	}
+	
+	let hidePopupEvent;
 
 	function addBuyPopup() {
 		let background = document.getElementById("popupBackground");
 		let buttons = document.getElementsByClassName("buttonFront");
+		const hidePopup = () => { 
+			background.style.display = "none";
+			clearTimeout(hidePopupEvent);
+		};
 		for(let button of buttons) {
 			button.addEventListener("click", () => {
 				background.style.display = "block";
 				background.style["background-image"] = "url(\"assets/items/confetti.png\")";
 				background.innerHTML = "<div id=\"popup\" class=\"popup\"><b>Added to cart!</b></div>";
-				const hidePopup = () => { background.style.display = "none"; };
 				background.addEventListener("click", hidePopup);
-				setTimeout(hidePopup, 3000);
+				hidePopupEvent = setTimeout(hidePopup, 3000);
 			});
 		}
 	}
