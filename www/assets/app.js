@@ -23,10 +23,10 @@
 					innerHTML += '<div class="inStock">' + i.inStock + ' in stock</div>';
 				else
 					innerHTML += '<div class="inStock outOfStock">Out of stock</div>';
-				innerHTML += "<div class=\"pushable\"><span class=\"buttonFront\" ";
+				innerHTML += "<div class=\"pushable\"><span class=\"buttonFront";
 				if (!i.inStock)
-					innerHTML += "class=\"unpressable\"
-				innerHTML += "><b>BUY</b></span></div>";
+					innerHTML += " unpressable";
+				innerHTML += "\"><b>BUY</b></span></div>";
 				innerHTML += '</div>';
 			}
 			itemEl.innerHTML = innerHTML;
