@@ -14,31 +14,23 @@
 		
 		fetch("items.json").then((res) => {
 			return res.json();
-		}).then((json) => {
+		}).then((items) => {
 			let innerHTML = "";
-			for(let i of json){
-				innerHTML += '<div class="itemcard"><img src="assets/items/' + i.id + '.png" /><div class="title">' + i.name + '</div><div class="description">' + i.description + '</div>'
-					+ '<div class="stars" style="--rating: ' + i.rating + '"></div><span class="ratingCount">(' + i.ratingCount + ')</span>';
-				let inStock, buttonType, buttonFrontType;
-				if (i.inStock > 0) {
-					inStock = i.inStock;
-					buttonType = "pushable";
-					buttonFrontType = "buttonFront";
-				
-					
-				if(i.inStock > 0)
-					innerHTML += '<div class="inStock">' + i.inStock + ' in stock</div>';
-				else
-					innerHTML += '<div class="inStock outOfStock">Out of stock</div>';
-				if (i.inStock) {
-					innerHTML += "<div class=\"pushable\"><span class=\"buttonFront\"><b>BUY</b></span></div></div>";
-					
-				}
-				innerHTML += "<div class=\"pushable\"><span class=\"buttonFront";
-				if (!i.inStock)
-					innerHTML += " unpressable";
-				innerHTML += "\"><b>BUY</b></span></div>";
-				innerHTML += '</div>';
+			for (let item of items) {
+				innerHTML += `<div class="itemcard"><img src="assets/items/${item.id}.png"/>` +
+					`<div class="title">${item.name}</div><div class="description">${item.description}</div>` +
+					`<div class="stars" style="--rating: ${item.rating}"></div><span class="ratingCount">(${item.ratingCount})</span>`;
+				let inStock, buttonClass, buttonFrontClass;
+				if (item.inStock > 0) {
+					inStock = `<div class="inStock">${item.inStock} in stock</div>`;
+					buttonClass = "pushButton";
+					buttonFrontClass = "pushButtonFront";
+				} else {
+					inStock = '<div class="inStock outOfStock">Out of stock</div>';
+					buttonClass = "disabledPushButton";
+					buttonFrontClass = "disabledPushButtonFront";
+				}			
+				innerHTML += `${inStock} <div class="${buttonClass}"><span class="${buttonFrontClass}"><b>BUY</b></span></div></div>`;
 			}
 			itemEl.innerHTML = innerHTML;
 			onFinished();
@@ -49,12 +41,12 @@
 
 	function addBuyPopup() {
 		let background = document.getElementById("popupBackground");
-		let buttons = document.getElementsByClassName("buttonFront");
+		let buttons = document.getElementsByClassName("pushButtonFront");
 		const hidePopup = () => { 
 			background.style.display = "none";
 			clearTimeout(hidePopupEvent);
 		};
-		for(let button of buttons) {
+		for (let button of buttons) {
 			button.addEventListener("click", () => {
 				background.style.display = "block";
 				background.style["background-image"] = "url(\"assets/items/confetti.png\")";
