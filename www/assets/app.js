@@ -20,17 +20,14 @@
 				innerHTML += `<div class="itemcard"><img src="assets/items/${item.id}.png"/>` +
 					`<div class="title">${item.name}</div><div class="description">${item.description}</div>` +
 					`<div class="stars" style="--rating: ${item.rating}"></div><span class="ratingCount">(${item.ratingCount})</span>`;
-				let inStock, buttonClass, buttonFrontClass;
-				if (item.inStock > 0) {
-					inStock = `<div class="inStock">${item.inStock} in stock</div>`;
-					buttonClass = "pushButton";
-					buttonFrontClass = "pushButtonFront";
-				} else {
-					inStock = '<div class="inStock outOfStock">Out of stock</div>';
-					buttonClass = "disabledPushButton";
-					buttonFrontClass = "disabledPushButtonFront";
-				}			
-				innerHTML += `${inStock} <div class="${buttonClass}"><span class="${buttonFrontClass}"><b>BUY</b></span></div></div>`;
+				if (item.inStock)
+					innerHTML += `<div class="inStock">${item.inStock} in stock</div>`;
+				else
+					innerHTML += '<div class="inStock outOfStock">Out of stock</div>';
+				
+				const buttonEnabled = (item.inStock ? "enabled" : "disabled");
+				innerHTML += `${inStock} <div class="pushButton ${buttonEnabled}"PushButton>` +
+					`<span class="pushButtonFront ${buttonEnabled}PushButtonFront"><b>BUY</b></span></div></div>`;
 			}
 			itemEl.innerHTML = innerHTML;
 			onFinished();
@@ -41,7 +38,7 @@
 
 	function addBuyPopup() {
 		let background = document.getElementById("popupBackground");
-		let buttons = document.getElementsByClassName("pushButtonFront");
+		let buttons = document.getElementsByClassName("enabledPushButtonFront");
 		const hidePopup = () => { 
 			background.style.display = "none";
 			clearTimeout(hidePopupEvent);
