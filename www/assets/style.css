@@ -140,26 +140,26 @@ footer{
 }
 
 
-.enabledPushButton {
+.pushButton.enabled {
 	background: #e70;
 }
 
-.enabledPushButtonFront {
+.pushButtonFront.enabled {
 	background: #fa0;
 	color: white;
 	transform: translateY(-6px);
 }
 
-.enabledPushButtonFront:active {
+.pushButtonFront.enabled:active {
 	transform: translateY(-3px);
 	transition:  0.02s;
 }
 
-.disabledPushButton {
+.pushButton.disabled {
 	background: #7a7a7a;
 }
 
-.disabledPushButtonFront {
+.pushButtonFront.disabled {
 	background: #a6a6a6;
 	color: white;
 }
