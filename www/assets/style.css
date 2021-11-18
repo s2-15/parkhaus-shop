@@ -130,6 +130,8 @@ footer{
 	font-size: 30px;
 	font-weight: bold;
 	text-align: center;
+	
+	transform: translateY(-6px);
 
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -147,7 +149,6 @@ footer{
 .pushButtonFront.enabledButton {
 	background: #fa0;
 	color: white;
-	transform: translateY(-6px);
 }
 
 .pushButtonFront.enabledButton:active {
