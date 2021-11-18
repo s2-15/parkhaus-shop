@@ -112,8 +112,7 @@ footer{
 }
 
 
-.pushable {
-	background: #e70;
+.pushButton {
 	border-radius: 10px;
 	width: 100%;
 	border: none;
@@ -124,48 +123,45 @@ footer{
 	outline-offset: 4px;
 }
 
-.buttonFront {
+.pushButtonFront {
 	display: block;
 	padding: 20px 42px;
 	border-radius: 10px;
 	font-size: 30px;
 	font-weight: bold;
 	text-align: center;
-	
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	 user-select: none;
+}
+
+
+.enabledPushButton {
+	background: #e70;
+}
+
+.enabledPushButtonFront {
 	background: #fa0;
 	color: white;
 	transform: translateY(-6px);
-
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	 user-select: none;
 }
 
-.buttonFront.unpressable {
-	display: block;
-	padding: 20px 42px;
-	border-radius: 10px;
-	font-size: 30px;
-	font-weight: bold;
-	text-align: center;
-	
-	background: #f00;
-	color: white;
-	
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	 user-select: none;
-}
-
-.buttonFront:active {
+.enabledPushButtonFront:active {
 	transform: translateY(-3px);
 	transition:  0.02s;
+}
+
+.disabledPushButton {
+	background: #7a7a7a;
+}
+
+.disabledPushButtonFront {
+	background: #a6a6a6;
+	color: white;
 }
 
 .modal {
