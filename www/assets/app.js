@@ -25,7 +25,7 @@
 				else
 					innerHTML += '<div class="inStock outOfStock">Out of stock</div>';
 				
-				const buttonEnabled = (item.inStock ? "enabled" : "disabled");
+				const buttonEnabled = (item.inStock ? "enabled" : "disabled") + "Button";
 				innerHTML += `<div class="pushButton ${buttonEnabled}">` +
 					`<span class="pushButtonFront ${buttonEnabled}"><b>BUY</b></span></div></div>`;
 			}
