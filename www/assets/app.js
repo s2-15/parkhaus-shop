@@ -26,8 +26,8 @@
 					innerHTML += '<div class="inStock outOfStock">Out of stock</div>';
 				
 				const buttonEnabled = (item.inStock ? "enabled" : "disabled");
-				innerHTML += `${inStock} <div class="pushButton ${buttonEnabled}"PushButton>` +
-					`<span class="pushButtonFront ${buttonEnabled}PushButtonFront"><b>BUY</b></span></div></div>`;
+				innerHTML += `<div class="pushButton ${buttonEnabled}">` +
+					`<span class="pushButtonFront ${buttonEnabled}"><b>BUY</b></span></div></div>`;
 			}
 			itemEl.innerHTML = innerHTML;
 			onFinished();
@@ -38,7 +38,7 @@
 
 	function addBuyPopup() {
 		let background = document.getElementById("popupBackground");
-		let buttons = document.getElementsByClassName("enabledPushButtonFront");
+		let buttons = document.getElementsByClassName("pushButtonFront enabled");
 		const hidePopup = () => { 
 			background.style.display = "none";
 			clearTimeout(hidePopupEvent);
