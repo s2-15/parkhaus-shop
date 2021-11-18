@@ -38,7 +38,7 @@
 
 	function addBuyPopup() {
 		let background = document.getElementById("popupBackground");
-		let buttons = document.getElementsByClassName("pushButtonFront enabled");
+		let buttons = document.getElementsByClassName("pushButtonFront enabledButton");
 		const hidePopup = () => { 
 			background.style.display = "none";
 			clearTimeout(hidePopupEvent);
