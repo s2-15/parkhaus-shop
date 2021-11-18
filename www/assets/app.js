@@ -19,10 +19,21 @@
 			for(let i of json){
 				innerHTML += '<div class="itemcard"><img src="assets/items/' + i.id + '.png" /><div class="title">' + i.name + '</div><div class="description">' + i.description + '</div>'
 					+ '<div class="stars" style="--rating: ' + i.rating + '"></div><span class="ratingCount">(' + i.ratingCount + ')</span>';
+				let inStock, buttonType, buttonFrontType;
+				if (i.inStock > 0) {
+					inStock = i.inStock;
+					buttonType = "pushable";
+					buttonFrontType = "buttonFront";
+				
+					
 				if(i.inStock > 0)
 					innerHTML += '<div class="inStock">' + i.inStock + ' in stock</div>';
 				else
 					innerHTML += '<div class="inStock outOfStock">Out of stock</div>';
+				if (i.inStock) {
+					innerHTML += "<div class=\"pushable\"><span class=\"buttonFront\"><b>BUY</b></span></div></div>";
+					
+				}
 				innerHTML += "<div class=\"pushable\"><span class=\"buttonFront";
 				if (!i.inStock)
 					innerHTML += " unpressable";
