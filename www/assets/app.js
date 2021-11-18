@@ -49,7 +49,7 @@
 				background.style["background-image"] = "url(\"assets/items/confetti.png\")";
 				background.innerHTML = "<div id=\"popup\" class=\"popup\"><b>Added to cart!</b></div>";
 				background.addEventListener("click", hidePopup);
-				hidePopupEvent = setTimeout(hidePopup, 3000);
+				hidePopupEvent = setTimeout(hidePopup, 2000);
 			});
 		}
 	}
