@@ -17,9 +17,9 @@
 		}).then((items) => {
 			let innerHTML = "";
 			for (let item of items) {
-				let price = `<div class="price" style="display:inline-block">${item.price}</div>`;
+				let price = `<div class="price" style="display:inline-block">${item.price}${item.currencySymbole}</div>`;
 				if ("oldPrice" in item) {
-					price += `<div class="oldprice" style="display:inline-block">${item.oldPrice}</div>`;
+					price += `<div class="oldprice" style="display:inline-block">${item.oldPrice}${item.currencySymbole}</div>`;
 					price += `<div style="display:inline-block" class="discount"><sup>${-100.0 * (1.0 - (item.price / item.oldPrice))}%</sup></div>`;
 				}
 				const discount = "oldPrice" in item ?  `<div class="oldprice" style="display:inline-block">${item.oldPrice}</div><div style="display:inline-block" class="discount"><sup></sup></div>` : ""
