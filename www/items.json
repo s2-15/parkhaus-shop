@@ -6,6 +6,7 @@
 		"rating": 5,
 		"ratingCount": 517,
 		"inStock": 999,
+		"oldPrice": "10.00€",
 		"price": "9.99€",
 		"hasPage": false
 	},
@@ -16,6 +17,7 @@
 		"rating": 5,
 		"ratingCount": 3961,
 		"inStock": 0,
+		"oldPrice": "10.00€",
 		"price": "9.99€",
 		"hasPage": false
 	},
@@ -36,6 +38,7 @@
 		"rating": 4.0,
 		"ratingCount": 42,
 		"inStock": 3,
+		"oldPrice": "99.99€",
 		"price": "3.99€",
 		"hasPage": false
 	}
