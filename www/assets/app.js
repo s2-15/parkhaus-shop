@@ -17,7 +17,7 @@
 		}).then((items) => {
 			let innerHTML = "";
 			for (let item of items) {
-				innerHTML += `<div class="itemcard"><img src="assets/items/${item.id}.png"/>` +
+				innerHTML += `<div class="itemcard"><div class="imgcontainer"><img src="assets/items/${item.id}.png"/></div>` +
 					`<div class="title">${item.name}</div><div class="description">${item.description}</div>` +
 					`<div class="stars" style="--rating: ${item.rating}"></div><span class="ratingCount">(${item.ratingCount})</span>`;
 				if (item.inStock)
