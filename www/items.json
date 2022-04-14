@@ -45,5 +45,17 @@
 		"price": "3.99",
 		"currencySymbole": "€",
 		"hasPage": false
+	},
+	{
+		"id": "gpu",
+		"name": "AMD Radeon HD 8490",
+		"description": "AMD Radeon HD 8490 delivers unprecedented acceleration at every scale to power the world’s highest-performing elastic data centers for AI, data analytics, and HPC.",
+		"rating": 3.5,
+		"ratingCount": 4,
+		"inStock": -1,
+		"oldPrice": "43",
+		"price": "42.99",
+		"currencySymbole": "Nieren",
+		"hasPage": false
 	}
 ]
