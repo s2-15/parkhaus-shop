@@ -7,7 +7,8 @@
 		"ratingCount": 517,
 		"inStock": 999,
 		"oldPrice": "10.00€",
-		"price": "9.99€",
+		"price": "9.99",
+		"currencySymbole": "€",
 		"hasPage": false
 	},
 	{
@@ -17,8 +18,9 @@
 		"rating": 5,
 		"ratingCount": 3961,
 		"inStock": 0,
-		"oldPrice": "10.00€",
-		"price": "9.99€",
+		"oldPrice": "10.00",
+		"price": "9.99",
+		"currencySymbole": "€",
 		"hasPage": false
 	},
 	{
@@ -28,7 +30,8 @@
 		"rating": 4.5,
 		"ratingCount": 93,
 		"inStock": 23,
-		"price": "15.99€",
+		"price": "15.99",
+		"currencySymbole": "€",
 		"hasPage": false
 	},
 	{
@@ -38,8 +41,9 @@
 		"rating": 4.0,
 		"ratingCount": 42,
 		"inStock": 3,
-		"oldPrice": "99.99€",
-		"price": "3.99€",
+		"oldPrice": "99.99",
+		"price": "3.99",
+		"currencySymbole": "€",
 		"hasPage": false
 	}
 ]
