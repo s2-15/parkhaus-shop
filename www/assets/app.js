@@ -22,7 +22,6 @@
 					price += `<div class="oldprice" style="display:inline-block">${item.oldPrice}${item.currencySymbole}</div>`;
 					price += `<div style="display:inline-block" class="discount"><sup>${Math.floor(-100.0 * (1.0 - (item.price / item.oldPrice)))}%</sup></div>`;
 				}
-				const discount = "oldPrice" in item ?  `<div class="oldprice" style="display:inline-block">${item.oldPrice}</div><div style="display:inline-block" class="discount"><sup></sup></div>` : ""
 				innerHTML += `<div class="itemcard"><div class="imgcontainer"><img src="assets/items/${item.id}.png"/></div>` +
 					`<div class="title">${item.name}</div><div class="description">${item.description}</div>` +
 					`<div class="stars" style="--rating: ${item.rating}"></div><span class="ratingCount">(${item.ratingCount})</span>` +
