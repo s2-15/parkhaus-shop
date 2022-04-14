@@ -130,6 +130,26 @@ footer{
 	color: red;
 }
 
+.price{
+	margin-top: 10px;
+	color: black;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.discount {
+	color: green;
+	font-weight: bold;
+}
+
+.oldprice {
+	margin-top: 10px;
+	color: grey;
+	text-decoration: line-through;
+	font-weight: bold;
+	font-size: 15px;
+}
+
 
 .pushButton {
 	border-radius: 10px;
