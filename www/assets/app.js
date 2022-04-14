@@ -19,14 +19,14 @@
 			for (let item of items) {
 				let price = `<div class="price" style="display:inline-block">${item.price}</div>`;
 				if ("oldPrice" in item) {
-					discount += `<div class="oldprice" style="display:inline-block">${item.oldPrice}</div>`;
-					discount += `<div style="display:inline-block" class="discount"><sup>${-100.0 * (1.0 - (item.price / item.oldPrice))) }%</sup></div>`;
+					price += `<div class="oldprice" style="display:inline-block">${item.oldPrice}</div>`;
+					price += `<div style="display:inline-block" class="discount"><sup>${-100.0 * (1.0 - (item.price / item.oldPrice))) }%</sup></div>`;
 				}
 				const discount = "oldPrice" in item ?  `<div class="oldprice" style="display:inline-block">${item.oldPrice}</div><div style="display:inline-block" class="discount"><sup></sup></div>` : ""
 				innerHTML += `<div class="itemcard"><div class="imgcontainer"><img src="assets/items/${item.id}.png"/></div>` +
 					`<div class="title">${item.name}</div><div class="description">${item.description}</div>` +
 					`<div class="stars" style="--rating: ${item.rating}"></div><span class="ratingCount">(${item.ratingCount})</span>` +
-					`<div><div class="price" style="display:inline-block">${item.price}</div><div class="oldprice" style="display:inline-block">20.00€</div><div style="display:inline-block" class="discount"><sup>(-30%)</sup></div></div>`;
+					`<div>${price}</div>`;
 				if (item.inStock)
 					innerHTML += `<div class="inStock">${item.inStock} in stock</div>`;
 				else
