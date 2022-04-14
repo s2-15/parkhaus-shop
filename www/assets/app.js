@@ -20,7 +20,7 @@
 				let price = `<div class="price" style="display:inline-block">${item.price}</div>`;
 				if ("oldPrice" in item) {
 					price += `<div class="oldprice" style="display:inline-block">${item.oldPrice}</div>`;
-					price += `<div style="display:inline-block" class="discount"><sup>${-100.0 * (1.0 - (item.price / item.oldPrice))) }%</sup></div>`;
+					price += `<div style="display:inline-block" class="discount"><sup>${-100.0 * (1.0 - (item.price / item.oldPrice))}%</sup></div>`;
 				}
 				const discount = "oldPrice" in item ?  `<div class="oldprice" style="display:inline-block">${item.oldPrice}</div><div style="display:inline-block" class="discount"><sup></sup></div>` : ""
 				innerHTML += `<div class="itemcard"><div class="imgcontainer"><img src="assets/items/${item.id}.png"/></div>` +
