@@ -8,7 +8,7 @@
 		"inStock": 999,
 		"oldPrice": "10.00",
 		"price": "9.99",
-		"currencySymbole": "€",
+		"currencySymbol": "€",
 		"hasPage": false
 	},
 	{
@@ -20,7 +20,7 @@
 		"inStock": 0,
 		"oldPrice": "10.00",
 		"price": "9.99",
-		"currencySymbole": "€",
+		"currencySymbol": "€",
 		"hasPage": false
 	},
 	{
@@ -31,7 +31,7 @@
 		"ratingCount": 93,
 		"inStock": 23,
 		"price": "15.99",
-		"currencySymbole": "€",
+		"currencySymbol": "€",
 		"hasPage": false
 	},
 	{
@@ -43,7 +43,7 @@
 		"inStock": 3,
 		"oldPrice": "99.99",
 		"price": "3.99",
-		"currencySymbole": "€",
+		"currencySymbol": "€",
 		"hasPage": false
 	},
 	{
@@ -55,7 +55,7 @@
 		"inStock": 0,
 		"oldPrice": "43",
 		"price": "42.99",
-		"currencySymbole": "Nieren",
+		"currencySymbol": "Nieren",
 		"hasPage": false
 	}
 ]
