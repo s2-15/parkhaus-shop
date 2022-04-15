@@ -17,9 +17,9 @@
 		}).then((items) => {
 			let innerHTML = "";
 			for (let item of items) {
-				let price = `<div class="price" style="display:inline-block">${item.price}${item.currencySymbole}</div>`;
+				let price = `<div class="price" style="display:inline-block">${item.price}${item.currencySymbol}</div>`;
 				if ("oldPrice" in item) {
-					price += `<div class="oldprice" style="display:inline-block">${item.oldPrice}${item.currencySymbole}</div>`;
+					price += `<div class="oldprice" style="display:inline-block">${item.oldPrice}${item.currencySymbol}</div>`;
 					price += `<div style="display:inline-block" class="discount"><sup>${Math.floor(-100.0 * (1.0 - (item.price / item.oldPrice)))}%</sup></div>`;
 				}
 				innerHTML += `<div class="itemcard"><div class="imgcontainer"><img src="assets/items/${item.id}.png"/></div>` +
