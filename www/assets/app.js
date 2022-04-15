@@ -63,7 +63,7 @@
 	function startConfetti() {
 		let duration = 5 * 1000;
 		let animationEnd = Date.now() + duration;
-		let defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+		let defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 10000 };
 
 		function randomInRange(min, max) {
 			return Math.random() * (max - min) + min;
