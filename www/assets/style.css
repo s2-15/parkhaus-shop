@@ -107,7 +107,7 @@ footer{
 }
 
 .stars::before{
-	content: '★★★★★';
+	content: '\2605\2605\2605\2605\2605';
 	background: linear-gradient(to right, #fc0 var(--percent), #ccc var(--percent));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
